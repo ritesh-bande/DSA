@@ -1,0 +1,19 @@
+// Online Java Compiler (Editor)
+// Write and run Java online using this editor.
+import java.util.*;
+class Main {
+    public static int pow(int a,int b){
+        if(b==0)return 1;
+        int ans=pow(a,b/2);
+        if(b%2==0)return ans*ans;
+        else return a*ans*ans;
+    }
+    public static void main(String[] args) {
+        System.out.println("Try clicking the Run button.");
+        Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt();
+        int b=sc.nextInt();
+        System.out.println(pow(a,b));
+        
+    }
+}
